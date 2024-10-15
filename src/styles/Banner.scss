@@ -1,0 +1,23 @@
+.bannerTitle {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  height: 223px;
+  width: 94%;
+  margin: 40px auto;
+  border-radius: 25px;
+  /* Utilisation d'une image placeholder temporaire */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("https://via.placeholder.com/1920x300");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  h1 {
+    margin-top: 77px;
+    color: #ffffff;
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-size: 48px;
+  }
+}

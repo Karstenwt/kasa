@@ -1,0 +1,39 @@
+.header {
+  display: flex;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  &__logo {
+    height: 47px;
+    width: 145px;
+
+    img {
+      max-width: 100%; // Assure que l'image occupe tout l'espace disponible
+      height: auto; // Préserve le ratio de l'image
+    }
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    a {
+      padding-left: 16px;
+      text-align: center;
+      color: #ff6060;
+      text-decoration: none;
+    }
+  }
+}
+
+.isActive {
+  p {
+    border-bottom: 2px solid #ff6060;
+  }
+}
