@@ -6,6 +6,7 @@ import Collapse from "../components/Collapse";
 import Stars from "../components/Stars";
 import Tagsname from "../components/Tagsname";
 import "../styles/PropertyDetail.scss";
+
 const PropertyDetail = () => {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -21,7 +22,7 @@ const PropertyDetail = () => {
   }, [id, navigate]);
 
   if (!house) {
-    return <div>Loading...</div>; // Retournez une indication de chargement si les données ne sont pas encore disponibles
+    return <div>Loading...</div>; // Retourne une indication de chargement si les données ne sont pas encore disponibles
   }
 
   return (
@@ -39,13 +40,22 @@ const PropertyDetail = () => {
             <img src={house.host.picture} alt="Host" className="host-picture" />
           </div>
           <div className="logement-rating">
-            <Stars rating={house.rating} />
+            <Stars rating={parseInt(house.rating)} />{" "}
+            {/* Convertir le rating en nombre */}
           </div>
         </div>
       </div>
+
+      {/* Section collapses pour Description et Equipments */}
       <div className="logement-collapses">
-        <Collapse title="Description" content={house.description} />
-        <Collapse title="Equipments" content={house.equipments.join(", ")} /> {}
+        <Collapse title="Description">{house.description}</Collapse>
+        <Collapse title="Equipments">
+          <ul>
+            {house.equipments.map((equipment, index) => (
+              <li key={index}>{equipment}</li>
+            ))}
+          </ul>
+        </Collapse>
       </div>
     </div>
   );
