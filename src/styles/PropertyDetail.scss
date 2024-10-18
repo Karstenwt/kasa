@@ -1,0 +1,56 @@
+.property-details {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto; // Centrer le contenu
+  padding: 20px;
+}
+
+.logement-details {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+
+  .logement-infos {
+    width: 50%;
+    .logement-title {
+      font-size: 36px;
+      font-weight: 500;
+      color: #ff6060;
+    }
+    .logement-location {
+      font-size: 18px;
+    }
+  }
+
+  .logement-host-and-rating {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    .logement-host {
+      display: flex;
+      align-items: center;
+      .host-picture {
+        border-radius: 50%;
+        height: 100px;
+        width: 100px;
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+.logement-collapses {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  margin-bottom: 50px;
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .collapse {
+    flex: 1;
+  }
+}

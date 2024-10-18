@@ -4,7 +4,8 @@ import Home from "./pages/Home";
 import APropos from "./pages/APropos";
 import NotFound from "./pages/NotFound";
 import Header from "./components/Header";
-import Footer from "./components/Footer";
+import PropertyDetail from "./pages/PropertyDetail"; // Importer PropertyDetail
+
 function App() {
   return (
     <Router>
@@ -12,9 +13,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/apropos" element={<APropos />} />
+        <Route path="/property/:id" element={<PropertyDetail />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-      <Footer />
     </Router>
   );
 }

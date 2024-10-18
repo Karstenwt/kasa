@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Banner from "../components/Banner";
 import Card from "../components/Card"; // Import du composant Card
-import annonces from "../data/annonces.json"; // Import du fichier JSON
+import annonces from "../data/annonces.json";
 
 const Home = () => {
   const [appartements, setAppartements] = useState([]);
@@ -20,6 +20,7 @@ const Home = () => {
         {appartements.map((appartement) => (
           <Card
             key={appartement.id}
+            id={appartement.id} // Passer l'ID ici pour l'utiliser dans Card
             title={appartement.title}
             location={appartement.location}
             cover={appartement.cover}
