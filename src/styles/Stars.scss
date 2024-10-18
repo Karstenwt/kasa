@@ -1,0 +1,17 @@
+.rating {
+  display: flex;
+  gap: 5px;
+  padding-top: 20px;
+
+  .star-full {
+    padding-top: 10px;
+    width: 35px;
+    height: 36px;
+  }
+  .star-empty {
+    width: 55px;
+    height: 56px;
+    margin-left: -7px;
+    margin-right: -7px;
+  }
+}

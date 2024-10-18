@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import annonces from "../data/annonces.json"; // Importer les annonces correctement
-import Slide from "../components/Slide"; // Assurez-vous que le composant Slide est bien importé
-import Collapse from "../components/Collapse"; // Importez Collapse pour Description et Equipements
-import Stars from "../components/Stars"; // Assurez-vous que Stars est bien défini et importé
-import Tagsname from "../components/Tagsname"; // Importez correctement Tagsname pour les tags
-import "../styles/PropertyDetail.scss"; // Assurez-vous que le SCSS est bien importé
-
+import annonces from "../data/annonces.json";
+import Slide from "../components/Slide";
+import Collapse from "../components/Collapse";
+import Stars from "../components/Stars";
+import Tagsname from "../components/Tagsname";
+import "../styles/PropertyDetail.scss";
 const PropertyDetail = () => {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -46,11 +45,7 @@ const PropertyDetail = () => {
       </div>
       <div className="logement-collapses">
         <Collapse title="Description" content={house.description} />
-        <Collapse
-          title="Equipments"
-          content={house.equipments.join(", ")}
-        />{" "}
-        {/* Join to display array correctly */}
+        <Collapse title="Equipments" content={house.equipments.join(", ")} /> {}
       </div>
     </div>
   );

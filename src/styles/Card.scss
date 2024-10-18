@@ -8,9 +8,9 @@ divCard {
 
 .appartement-list {
   display: flex;
-  flex-wrap: wrap; // Permet d'avoir plusieurs lignes si nécessaire
-  justify-content: center; // Centre les cartes horizontalement
-  gap: 20px; // Ajoute de l'espace entre les cartes
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
   padding: 20px;
 }
 
