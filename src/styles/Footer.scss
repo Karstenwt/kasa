@@ -1,3 +1,17 @@
+/* Ajoutez ce style pour le corps ou le conteneur principal */
+body,
+html {
+  height: 100%; /* S'assure que le corps prend toute la hauteur */
+  margin: 0; /* Supprime les marges par défaut */
+}
+
+.app-container {
+  /* Nom du conteneur principal */
+  display: flex;
+  flex-direction: column; /* Colonne pour empiler le contenu et le footer */
+  min-height: 100vh; /* S'assure que le conteneur prend toute la hauteur de la fenêtre */
+}
+
 .footer {
   width: 100%;
   height: 209px;
