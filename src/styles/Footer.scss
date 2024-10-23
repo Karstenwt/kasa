@@ -15,21 +15,23 @@ html {
   height: 209px;
   background-color: #000;
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* Les éléments sont empilés en colonne */
   color: white;
   justify-content: center;
-  align-items: center;
+  align-items: center; /* Centre horizontalement tout le contenu */
+  text-align: center; /* Centre également le texte à l'intérieur */
 
   &__logo {
-    height: 39.44px;
-    width: 122px;
+    height: 40px; /* Taille fixe du logo */
+    width: auto; /* Conserver le ratio d'aspect du logo */
+    margin-bottom: 10px; /* Espace entre le logo et le texte */
   }
 
   &__text {
     font-size: 12px;
 
-    @media (min-width: 1000px) {
-      font-size: 24px;
+    @media (min-width: 768px) {
+      font-size: 24px; /* Augmenter la taille du texte sur grand écran */
     }
   }
 }
