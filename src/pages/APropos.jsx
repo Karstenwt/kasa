@@ -1,10 +1,12 @@
 import React from "react";
+import Banner from "../components/Banner";
 import Collapse from "../components/Collapse";
 import "../styles/APropos.scss";
 
 const APropos = () => {
   return (
     <div className="apropos-page">
+      <Banner image="/image/imageapropos.jpeg" />
       <div className="apropos-content">
         <Collapse title="Fiabilité">
           Les annonces postées sur Kasa garantissent une fiabilité totale. Les

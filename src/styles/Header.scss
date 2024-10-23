@@ -27,13 +27,11 @@
       padding-left: 16px;
       text-align: center;
       color: #000000;
-      text-decoration: none;
-    }
-  }
-}
+      text-decoration: none; /* Retire le soulignement par défaut */
 
-.isActive {
-  p {
-    border-bottom: 2px solid #ff6060;
+      &:hover {
+        text-decoration: underline; /* Ajoute le soulignement au survol */
+      }
+    }
   }
 }

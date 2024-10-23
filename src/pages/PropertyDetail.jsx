@@ -40,8 +40,7 @@ const PropertyDetail = () => {
             <img src={house.host.picture} alt="Host" className="host-picture" />
           </div>
           <div className="logement-rating">
-            <Stars rating={parseInt(house.rating)} />{" "}
-            {/* Convertir le rating en nombre */}
+            <Stars rating={parseInt(house.rating)} />
           </div>
         </div>
       </div>

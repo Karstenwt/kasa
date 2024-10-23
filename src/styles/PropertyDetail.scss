@@ -3,54 +3,179 @@
   max-width: 1240px;
   margin: 0 auto;
   padding: 20px;
-}
+  box-sizing: border-box;
 
-.logement-details {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
-
-  .logement-infos {
-    width: 50%;
-    .logement-title {
-      font-size: 36px;
-      font-weight: 500;
-      color: #ff6060;
-    }
-    .logement-location {
-      font-size: 18px;
-    }
-  }
-
-  .logement-host-and-rating {
+  .logement-details {
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    .logement-host {
+    justify-content: space-between;
+    margin-bottom: 20px;
+    margin-left: 30px;
+
+    .logement-infos {
+      width: 50%;
+
+      .logement-title {
+        font-size: 36px;
+        font-weight: 500;
+        color: #ff6060;
+        width: 70vw;
+      }
+
+      .logement-location {
+        font-size: 18px;
+      }
+    }
+
+    .logement-host-and-rating {
       display: flex;
-      align-items: center;
-      .host-picture {
-        border-radius: 50%;
-        height: 100px;
-        width: 100px;
-        margin-left: 10px;
+      flex-direction: column;
+      align-items: flex-end;
+      width: 100%;
+
+      .logement-host {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+
+        p {
+          margin-bottom: 10px;
+          margin-right: 15px;
+        }
+
+        .host-picture {
+          border-radius: 50%;
+          height: 100px;
+          width: 100px;
+          margin-top: 10px;
+        }
+      }
+
+      .logement-rating {
+        margin-top: 15px;
       }
     }
   }
+
+  .logement-tags-list {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    list-style: none;
+    padding-left: 0;
+    width: 100vw;
+  }
+
+  .rating {
+    display: flex;
+    gap: 10px;
+    padding-top: 20px;
+
+    .star-full {
+      width: 25px;
+      height: 26px;
+    }
+
+    .star-empty {
+      width: 40px;
+      height: 45px;
+    }
+  }
+
+  .logement-collapses {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    margin-bottom: 50px;
+    box-sizing: border-box;
+
+    @media (max-width: 800px) {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .collapse {
+      flex: 1;
+    }
+  }
 }
 
-.logement-collapses {
+/* Ajouts spécifiques pour le mode mobile uniquement */
+@media screen and (max-width: 768px) {
+  .property-details {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    padding: 10px !important;
+  }
+
+  .logement-details {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    margin-right: 40px !important;
+    margin-left: 40px !important;
+    .logement-infos {
+      width: 100% !important;
+      margin-bottom: 20px !important;
+    }
+
+    .logement-host-and-rating {
+      display: flex !important;
+      flex-direction: row-reverse !important; /* Aligner sur une même ligne */
+      justify-content: space-between !important; /* Séparer les éléments */
+      align-items: center !important; /* Centrer verticalement */
+      width: 100% !important; /* Utiliser toute la largeur */
+    }
+
+    .logement-host {
+      display: flex !important;
+      flex-direction: row !important;
+      align-items: center !important;
+      justify-content: flex-end !important;
+      width: 50% !important; /* Limite l'espace que prend l'hôte en mobile */
+
+      flex-shrink: 0 !important; /* Empêche le rétrécissement de l'hôte en mobile */
+
+      .host-picture {
+        border-radius: 50% !important;
+        height: 100px !important;
+        width: 100px !important;
+        margin-left: 0px !important;
+      }
+
+      p {
+        margin-right: 10px !important;
+      }
+    }
+
+    .logement-rating {
+      display: flex !important;
+      align-items: center !important;
+      width: 50% !important; /* Limite l'espace que prennent les étoiles en mobile */
+      flex-shrink: 0 !important; /* Empêche les étoiles de rétrécir en mobile */
+      margin-right: auto !important;
+    }
+  }
+
+  .rating {
+    display: flex !important;
+    gap: 10px !important;
+  }
+}
+
+.logement-collapses .collapse {
+  width: 95vw;
+  height: 80px;
+}
+
+.logement-tags-list {
   display: flex;
-  justify-content: space-between;
-  gap: 50px;
-  margin-bottom: 50px;
-
-  @media (max-width: 800px) {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .collapse {
-    flex: 1;
-  }
+  justify-content: flex-start;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 5px;
+  padding-top: 10px;
 }
