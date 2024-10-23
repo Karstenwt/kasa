@@ -27,10 +27,10 @@
       padding-left: 16px;
       text-align: center;
       color: #000000;
-      text-decoration: none; /* Retire le soulignement par défaut */
+      text-decoration: none;
 
       &:hover {
-        text-decoration: underline; /* Ajoute le soulignement au survol */
+        text-decoration: underline;
       }
     }
   }

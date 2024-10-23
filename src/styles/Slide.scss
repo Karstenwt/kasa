@@ -23,18 +23,18 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 4%; /* Taille des flèches */
+    width: 4%;
     height: auto;
     cursor: pointer;
     z-index: 10;
   }
 
   .left {
-    left: 20px; /* Position de la flèche à gauche */
+    left: 20px;
   }
 
   .right {
-    right: 50px; /* Ajuste la position de la flèche de droite pour la rapprocher vers le centre */
+    right: 80px;
   }
 
   .slide-counter {
@@ -47,7 +47,6 @@
     border-radius: 5px;
   }
 
-  /* Media query pour les écrans plus petits */
   @media screen and (max-width: 768px) {
     width: 100%;
     height: auto;
@@ -57,31 +56,29 @@
     }
 
     .arrow {
-      width: 6%; /* Réduction de la taille des flèches */
+      width: 6%;
     }
 
     .left {
-      left: 10px; /* Ajustement de la flèche gauche */
+      left: 10px;
     }
 
     .right {
-      right: 70px; /* Ajustement de la flèche droite pour être plus vers le centre */
+      right: 70px;
     }
   }
 
-  /* Media query pour encore plus petits écrans */
   @media screen and (max-width: 480px) {
     .arrow {
       width: 8%;
-      /* Encore plus petit sur les écrans très petits */
     }
 
     .left {
-      left: 10px; /* Ajuste la marge gauche pour les très petits écrans */
+      left: 10px;
     }
 
     .right {
-      right: 70px; /* Ajuste la marge droite pour rapprocher la flèche du centre */
+      right: 70px;
     }
   }
 }

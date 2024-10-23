@@ -23,7 +23,7 @@
 
     &--btn {
       padding: 5px;
-      transition: transform 0.3s ease; /* Animation fluide */
+      transition: transform 0.3s ease; 
     }
 
     &--btn.rotate {
@@ -50,7 +50,7 @@
     padding: 10px;
   }
 
-  @media (min-width: 800px) {
+  @media (min-width: 768px) {
     &__title {
       height: 47px;
 

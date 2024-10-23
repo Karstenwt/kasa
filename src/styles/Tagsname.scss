@@ -12,11 +12,11 @@
 }
 
 .logement-tags-list {
-  display: flex; /* Utiliser flex */
-  justify-content: flex-start; /* Aligner à gauche */
-  align-items: flex-start; /* Alignement en haut */
-  flex-direction: row; /* Disposition en ligne */
-  flex-wrap: wrap; /* Permet de passer à la ligne */
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
   gap: 10px;
   padding-bottom: 5px;
   padding-top: 5px;
@@ -26,13 +26,13 @@
 
 @media screen and (max-width: 768px) {
   .logement-tags-list {
-    justify-content: flex-start; /* Toujours aligner à gauche */
-    flex-wrap: wrap; /* Les tags peuvent se placer sur plusieurs lignes si nécessaire */
-    gap: 10px; /* Garder l'espacement cohérent */
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
   }
 
   .logement-tags {
-    flex: none; /* Empêcher les éléments de s'étendre ou se répartir en plein écran */
-    width: auto; /* Laisser les éléments ajuster leur propre largeur */
+    flex: none;
+    width: auto;
   }
 }
