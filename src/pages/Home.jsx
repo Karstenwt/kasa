@@ -1,15 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Banner from "../components/Banner";
 import Card from "../components/Card";
-import annonces from "../data/annonces.json";
 
-const Home = () => {
-  const [appartements, setAppartements] = useState([]);
-
-  useEffect(() => {
-    setAppartements(annonces); // Charger les données des annonces
-  }, []);
-
+const Home = ({ appartements }) => {
+  // Récupère les données via les props
   return (
     <div>
       <Banner

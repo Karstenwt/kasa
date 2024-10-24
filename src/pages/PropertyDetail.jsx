@@ -1,28 +1,28 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import annonces from "../data/annonces.json";
 import Slide from "../components/Slide";
 import Collapse from "../components/Collapse";
 import Stars from "../components/Stars";
 import Tagsname from "../components/Tagsname";
 import "../styles/PropertyDetail.scss";
 
-const PropertyDetail = () => {
+const PropertyDetail = ({ appartements }) => {
+  // Récupère les données via les props
   const { id } = useParams();
   const navigate = useNavigate();
   const [house, setHouse] = useState(null);
 
   useEffect(() => {
-    const selectedHouse = annonces.find((logement) => logement.id === id);
+    const selectedHouse = appartements.find((logement) => logement.id === id); // Utilise les appartements passés en props
     if (!selectedHouse) {
       navigate("/404");
     } else {
       setHouse(selectedHouse);
     }
-  }, [id, navigate]);
+  }, [id, navigate, appartements]); // Ajoute appartements comme dépendance
 
   if (!house) {
-    return <div>Loading...</div>; // Retourne une indication de chargement si les données ne sont pas encore disponibles
+    return <div>Loading...</div>;
   }
 
   return (
