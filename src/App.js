@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import APropos from "./pages/APropos";
-import PropertyDetail from "./pages/PropertyDetail";
-import NotFound from "./pages/NotFound";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
+import Home from "./pages/Home/Home";
+import APropos from "./pages/Apropos/APropos";
+import PropertyDetail from "./pages/PropertyDetail/PropertyDetail";
+import NotFound from "./pages/NotFound/NotFound";
+import Footer from "./components/Footer/Footer";
+import Header from "./components/Header/Header";
 import annonces from "./data/annonces.json";
 
 const App = () => {

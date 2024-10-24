@@ -1,7 +1,7 @@
 import React from "react";
-import Banner from "../components/Banner";
-import Collapse from "../components/Collapse";
-import "../styles/APropos.scss";
+import Banner from "../../components/Banner/Banner";
+import Collapse from "../../components/Collapse/Collapse";
+import "./APropos.scss";
 
 const APropos = () => {
   return (

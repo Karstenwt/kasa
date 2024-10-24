@@ -1,6 +1,6 @@
 import React from "react";
-import Banner from "../components/Banner";
-import Card from "../components/Card";
+import Banner from "../../components/Banner/Banner";
+import Card from "../../components/Card/Card";
 
 const Home = ({ appartements }) => {
   // Récupère les données via les props

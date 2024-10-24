@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import "../styles/Slide.scss";
-import arrowLeft from "../assets/images/arrowleft.png";
-import arrowRight from "../assets/images/arrowright.png";
+import "./Slide.scss";
+import arrowLeft from "../../assets/images/arrowleft.png";
+import arrowRight from "../../assets/images/arrowright.png";
 import propTypes from "prop-types";
 
 const Slide = ({ images = [] }) => {

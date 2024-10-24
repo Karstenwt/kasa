@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/Tagsname.scss";
+import "./Tagsname.scss";
 
 const Tagsname = ({ tags }) => {
   return (

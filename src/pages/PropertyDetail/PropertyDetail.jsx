@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import Slide from "../components/Slide";
-import Collapse from "../components/Collapse";
-import Stars from "../components/Stars";
-import Tagsname from "../components/Tagsname";
-import "../styles/PropertyDetail.scss";
+import Slide from "../../components/Slide/Slide";
+import Collapse from "../../components/Collapse/Collapse";
+import Stars from "../../components/Stars/Stars";
+import Tagsname from "../../components/Tagsname/Tagsname";
+import "./PropertyDetail.scss";
 
 const PropertyDetail = ({ appartements }) => {
   // Récupère les données via les props

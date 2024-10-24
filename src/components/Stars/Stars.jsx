@@ -1,4 +1,4 @@
-import "../styles/Stars.scss";
+import "./Stars.scss";
 import React from "react";
 import propTypes from "prop-types";
 
