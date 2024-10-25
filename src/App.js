@@ -7,24 +7,25 @@ import NotFound from "./pages/NotFound/NotFound";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import annonces from "./data/annonces.json";
+import "./styles/App.scss";
 
 const App = () => {
   const [appartements, setAppartements] = useState([]);
 
   useEffect(() => {
-    setAppartements(annonces); // Charger les données des annonces une seule fois
+    setAppartements(annonces);
   }, []);
 
   return (
     <Router>
       <Header />
       <Routes>
-        <Route path="/" element={<Home appartements={appartements} />} />{" "}
+        <Route path="/" element={<Home appartements={appartements} />} />
         <Route path="/apropos" element={<APropos />} />
         <Route
           path="/property/:id"
           element={<PropertyDetail appartements={appartements} />}
-        />{" "}
+        />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

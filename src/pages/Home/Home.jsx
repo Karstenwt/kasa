@@ -3,14 +3,13 @@ import Banner from "../../components/Banner/Banner";
 import Card from "../../components/Card/Card";
 
 const Home = ({ appartements }) => {
-  // Récupère les données via les props
   return (
     <div>
       <Banner
         image="/image/imagebanniere.jpeg"
         title="Chez vous, partout et ailleurs"
       />
-      <div className="appartement-list">
+      <div className="property-list">
         {appartements.map((appartement) => (
           <Card
             key={appartement.id}

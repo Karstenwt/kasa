@@ -23,15 +23,19 @@
     justify-content: space-between;
     align-items: center;
 
-    a {
+    .header__link {
       padding-left: 16px;
       text-align: center;
       color: #000000;
-      text-decoration: none;
+      text-decoration: none; /* Aucun soulignement par défaut */
 
       &:hover {
-        text-decoration: underline;
+        text-decoration: underline; /* Soulignement au survol */
       }
+    }
+
+    .header__link.active {
+      text-decoration: underline; /* Soulignement pour le lien actif */
     }
   }
 }

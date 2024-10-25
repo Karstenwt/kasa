@@ -1,8 +1,9 @@
 .bannerTitle {
   position: relative;
   display: flex;
-  justify-content: center;
-  text-align: center;
+  justify-content: center; /* Centré en version desktop */
+  align-items: center; /* Centre verticalement le texte */
+  text-align: center; /* Centré le texte */
   height: 223px;
   width: 94%;
   margin: 40px auto;
@@ -11,7 +12,6 @@
   background-repeat: no-repeat;
   background-position: center;
 
-  // Ajoute la superposition sombre
   &::before {
     content: "";
     position: absolute;
@@ -25,11 +25,28 @@
   }
 
   h1 {
-    margin-top: 77px;
+    margin-top: 0;
     color: #ffffff;
     font-family: "Montserrat", sans-serif;
-    font-weight: 500;
+    font-weight: 700;
     font-size: 48px;
     z-index: 2;
+    white-space: nowrap;
+  }
+
+  @media (max-width: 768px) {
+    height: 150px;
+    justify-content: flex-start; /* Aligner à gauche en version mobile */
+    text-align: left; /* Texte à gauche en version mobile */
+    padding-left: 20px; /* Ajouter un padding à gauche pour mobile */
+
+    h1 {
+      font-size: 24px;
+      white-space: normal;
+    }
+
+    .mobile-line-break {
+      display: block;
+    }
   }
 }

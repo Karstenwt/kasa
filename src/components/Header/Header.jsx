@@ -1,6 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import "./Header.scss";
+import { NavLink } from "react-router-dom";
+import "../Header/Header.scss";
 
 const Header = () => {
   return (
@@ -9,12 +9,22 @@ const Header = () => {
         <img src={"/image/LOGO.png"} alt="Kasa Logo" />
       </div>
       <nav className="header__nav">
-        <Link to="/" className="header__link">
+        <NavLink
+          to="/"
+          className={({ isActive }) =>
+            isActive ? "header__link active" : "header__link"
+          }
+        >
           Accueil
-        </Link>
-        <Link to="/apropos" className="header__link">
+        </NavLink>
+        <NavLink
+          to="/apropos"
+          className={({ isActive }) =>
+            isActive ? "header__link active" : "header__link"
+          }
+        >
           À propos
-        </Link>
+        </NavLink>
       </nav>
     </header>
   );
