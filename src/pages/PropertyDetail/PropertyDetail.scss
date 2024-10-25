@@ -92,7 +92,7 @@
     margin-bottom: 50px;
     box-sizing: border-box;
 
-    @media (max-width: 800px) {
+    @media (max-width: 768px) {
       flex-direction: column;
       gap: 20px;
     }
@@ -154,8 +154,8 @@
     .logement-rating {
       display: flex !important;
       align-items: center !important;
-      width: 50% !important; /* Limite l'espace que prennent les étoiles en mobile */
-      flex-shrink: 0 !important; /* Empêche les étoiles de rétrécir en mobile */
+      width: 50% !important;
+      flex-shrink: 0 !important;
       margin-right: auto !important;
     }
   }
