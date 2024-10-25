@@ -10,7 +10,10 @@ const Footer = () => {
           alt="Kasa Logo"
           className="footer__logo"
         />
-        <p className="footer__text">© 2020 Kasa. All rights reserved.</p>
+        <p className="footer__text">
+          © 2020 Kasa. All<span className="mobile-line-break"> </span>rights
+          reserved.
+        </p>
       </div>
     </footer>
   );
