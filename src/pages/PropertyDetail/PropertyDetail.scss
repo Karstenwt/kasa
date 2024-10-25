@@ -1,4 +1,17 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 .property-details {
+  flex: 1; /* Assure que le contenu prend tout l'espace restant */
   width: 100%;
   max-width: 1240px;
   margin: 0 auto;
@@ -92,14 +105,24 @@
     margin-bottom: 50px;
     box-sizing: border-box;
 
+    .collapse {
+      flex: 1;
+    }
+
     @media (max-width: 768px) {
       flex-direction: column;
       gap: 20px;
     }
+  }
+}
 
-    .collapse {
-      flex: 1;
-    }
+.collapse__content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+
+  &.open {
+    max-height: 500px; /* Permet au collapse de s'étendre */
   }
 }
 
@@ -117,6 +140,7 @@
     width: 100% !important;
     margin-right: 40px !important;
     margin-left: 40px !important;
+
     .logement-infos {
       width: 100% !important;
       margin-bottom: 20px !important;
@@ -136,7 +160,6 @@
       align-items: center !important;
       justify-content: flex-end !important;
       width: 50% !important;
-
       flex-shrink: 0 !important;
 
       .host-picture {
