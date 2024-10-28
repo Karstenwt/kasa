@@ -98,14 +98,14 @@ html {
   }
 
   .logement-collapses {
-    display: flex;
+    display: block;
     justify-content: space-between;
     gap: 50px;
     margin-bottom: 50px;
     box-sizing: border-box;
 
     .collapse {
-      flex: 1;
+      margin-bottom: 20px;
     }
 
     @media (max-width: 768px) {
@@ -210,4 +210,5 @@ html {
 /* Footer */
 footer {
   margin-top: auto;
+  padding-top: 20px;
 }

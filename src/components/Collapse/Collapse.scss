@@ -1,8 +1,10 @@
 .collapse {
   margin-bottom: 15px;
+
   max-width: 1023px;
   margin-left: auto;
   margin-right: auto;
+  border: 2px solid;
 
   &__title {
     background-color: #ff6060;
@@ -17,6 +19,7 @@
       color: white;
       font-size: 13px;
       padding: 5px;
+      font-weight: 700;
     }
 
     &--btn {
