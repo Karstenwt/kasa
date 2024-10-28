@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import "./Collapse.scss";
 
 const Collapse = ({ title, children }) => {
-  const [isOpen, setIsOpen] = useState(false); // Le collapse est fermé par défaut
+  const [isOpen, setIsOpen] = useState(false);
 
   const toggleCollapse = () => {
-    setIsOpen(!isOpen); // Alterne entre ouvert et fermé
+    setIsOpen(!isOpen);
   };
 
   return (
@@ -13,8 +13,8 @@ const Collapse = ({ title, children }) => {
       <div className="collapse__title" onClick={toggleCollapse}>
         <span className="collapse__title--txt">{title}</span>
         <img
-          className={`collapse__title--btn ${isOpen ? "rotate" : ""}`} // Appliquer la classe 'rotate' si isOpen est true
-          src="/image/arrowUp.png" // Garde la même image de flèche, juste la rotation la modifie
+          className={`collapse__title--btn ${isOpen ? "rotate" : ""}`}
+          src="/image/arrowUp.png"
           alt={isOpen ? "Fermer" : "Ouvrir"}
         />
       </div>

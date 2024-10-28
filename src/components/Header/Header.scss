@@ -27,15 +27,15 @@
       padding-left: 16px;
       text-align: center;
       color: #000000;
-      text-decoration: none; /* Aucun soulignement par défaut */
+      text-decoration: none;
 
       &:hover {
-        text-decoration: underline; /* Soulignement au survol */
+        text-decoration: underline;
       }
     }
 
     .header__link.active {
-      text-decoration: underline; /* Soulignement pour le lien actif */
+      text-decoration: underline;
     }
   }
 }

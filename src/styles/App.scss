@@ -203,3 +203,15 @@ html {
   gap: 5px;
   padding-top: 10px;
 }
+
+.property-list {
+  background-color: #f6f6f6;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 1200px;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}

@@ -11,7 +11,7 @@ html {
 }
 
 .property-details {
-  flex: 1; /* Assure que le contenu prend tout l'espace restant */
+  flex: 1;
   width: 100%;
   max-width: 1240px;
   margin: 0 auto;
@@ -22,7 +22,6 @@ html {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
-    margin-left: 30px;
 
     .logement-infos {
       width: 50%;
@@ -122,7 +121,12 @@ html {
   transition: max-height 0.5s ease;
 
   &.open {
-    max-height: 500px; /* Permet au collapse de s'étendre */
+    max-height: none;
+  }
+
+  ul {
+    list-style-type: none;
+    padding-left: 0;
   }
 }
 
@@ -191,7 +195,7 @@ html {
 
 .logement-collapses .collapse {
   width: 95vw;
-  height: 80px;
+  height: auto;
 }
 
 .logement-tags-list {
@@ -201,4 +205,9 @@ html {
   flex-wrap: wrap;
   gap: 5px;
   padding-top: 10px;
+}
+
+/* Footer */
+footer {
+  margin-top: auto;
 }

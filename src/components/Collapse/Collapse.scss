@@ -25,7 +25,7 @@
     }
 
     &--btn.rotate {
-      transform: rotate(-180deg); /* Rotation de la flèche */
+      transform: rotate(-180deg);
     }
   }
 
@@ -38,18 +38,16 @@
     margin-top: 10px;
     padding: 0 10px;
     overflow: hidden;
-    max-height: 0; /* Définit la hauteur fermée */
-    transition: max-height 0.5s ease-out, padding 0.3s ease;
+    max-height: 0;
+    transition: max-height 0.5s ease-in-out, padding 0.5s ease;
     box-sizing: border-box;
   }
 
   &__content.open {
-    max-height: 1000px; /* S'ajuste pour que le contenu soit entièrement visible */
-    padding: 10px; /* Ajoute du padding lorsque le contenu est visible */
+    max-height: 1000px;
   }
 
   @media (min-width: 768px) {
-    /* Éléments pour que le collapse étende bien la page */
     &__title {
       height: 47px;
 
@@ -67,7 +65,7 @@
     &__content {
       margin-top: 20px;
       font-size: 18px;
-      transition: max-height 0.5s ease, padding 0.5s ease; /* Animation plus fluide */
+      transition: max-height 0.5s ease-in-out, padding 0.5s ease;
     }
 
     &__content.open {
