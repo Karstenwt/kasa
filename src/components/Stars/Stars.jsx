@@ -10,7 +10,7 @@ const Stars = ({ rating }) => {
         stars.push(
           <img
             key={i}
-            src="/image/star_active.png"
+            src={`${process.env.PUBLIC_URL}/image/star_active.png`}
             alt="star"
             className="star-full"
           />
@@ -19,7 +19,7 @@ const Stars = ({ rating }) => {
         stars.push(
           <img
             key={i}
-            src="/image/star_inactive.png"
+            src={`${process.env.PUBLIC_URL}/image/star_inactive.png`}
             alt="star"
             className="star-empty"
           />

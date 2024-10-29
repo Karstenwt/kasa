@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <header className="header">
       <div className="header__logo">
-        <img src={"/image/LOGO.png"} alt="Kasa Logo" />
+        <img src={`${process.env.PUBLIC_URL}/image/LOGO.png`} alt="Kasa Logo" />
       </div>
       <nav className="header__nav">
         <NavLink

@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer__content">
         <img
-          src="/image/LOGO_footer.png"
+          src={`${process.env.PUBLIC_URL}/image/LOGO_footer.png`}
           alt="Kasa Logo"
           className="footer__logo"
         />

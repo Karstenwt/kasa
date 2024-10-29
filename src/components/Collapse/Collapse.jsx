@@ -14,7 +14,7 @@ const Collapse = ({ title, children }) => {
         <span className="collapse__title--txt">{title}</span>
         <img
           className={`collapse__title--btn ${isOpen ? "rotate" : ""}`}
-          src="/image/arrowUp.png"
+          src={`${process.env.PUBLIC_URL}/image/arrowUp.png`}
           alt={isOpen ? "Fermer" : "Ouvrir"}
         />
       </div>
