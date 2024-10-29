@@ -6,7 +6,7 @@ const Banner = () => {
     <div
       className="bannerTitle"
       style={{
-        backgroundImage: `url(${process.env.PUBLIC_URL}/images/banner.jpg)`,
+        backgroundImage: `url(${process.env.PUBLIC_URL}/image/imagebanniere.jpeg)`,
       }}
     >
       <h1>
